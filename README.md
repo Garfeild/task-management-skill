@@ -1,4 +1,7 @@
-# task-management-skill
+[![skills.sh](https://skills.sh/b/garfeild/task-management-skill)](https://skills.sh/garfeild/task-management-skill)
+
+
+# task-management
 
 A lightweight task management skill for [Claude Code](https://claude.ai/code). Tasks live as Markdown files in your project — no external tools, no databases.
 
@@ -61,7 +64,7 @@ Add this to your project's `CLAUDE.md` to make Claude automatically check task s
 ```markdown
 ## Task Management
 
-Tasks are tracked in `.tasks/` using the [task-management-skill](https://github.com/YOUR_USERNAME/task-management-skill) skill.
+Tasks are tracked in `.tasks/` using the [task-management-skill](https://github.com/garfeild/task-management-skill) skill.
 
 ### Starting a session
 
