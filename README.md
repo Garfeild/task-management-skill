@@ -4,16 +4,8 @@ A lightweight task management skill for [Claude Code](https://claude.ai/code). T
 
 ## Install
 
-Copy the command file into your project (or globally):
-
 ```bash
-# Project-scoped (recommended)
-mkdir -p .claude/commands
-cp path/to/claude-task-manager/commands/task.md .claude/commands/task.md
-
-# Global — available in every project
-mkdir -p ~/.claude/commands
-cp path/to/claude-task-manager/commands/task.md ~/.claude/commands/task.md
+npx skills@latest add garfeild/task-management-skill
 ```
 
 Then paste the snippet from `claude-md-snippet.md` into your project's `CLAUDE.md` to enable the automatic session-start behavior.
@@ -84,4 +76,4 @@ Use `/task` for all task operations (start, complete, new, log).
 
 ## Templates
 
-The `templates/` folder contains the raw Markdown templates the skill uses to initialize new projects. You can customize them before copying.
+The `templates/` folder contains the raw Markdown templates the skill uses to initialize new projects. You can customize them before installing.

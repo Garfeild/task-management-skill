@@ -1,0 +1,6 @@
+{
+  "name": "task-management-skill",
+  "skills": [
+    "./skills/task-manager"
+  ]
+}

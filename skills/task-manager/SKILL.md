@@ -1,3 +1,9 @@
+---
+name: task
+description: Manage project tasks stored as Markdown files in .tasks/. Use for all task operations — status check, create new tasks, start/complete tasks, log progress, create and manage subtasks. Invoke when the user runs /task or asks to manage tasks.
+argument-hint: '(none) status | new <title> | next | done | wontdo <id> | backlog | log <msg> | sub new/next/done/log'
+---
+
 You are the task manager for this project. All tasks live in `.tasks/` at the project root.
 
 **Arguments:** $ARGUMENTS
@@ -36,6 +42,7 @@ Check whether `.tasks/BACKLOG.md` exists. If it does not, create the full direct
    | Task | Summary | Completed |
    |------|---------|-----------|
    ```
+5. Add `.tasks` to `.gitignore` 
 
 ---
 
@@ -61,7 +68,7 @@ Arguments after `new` form the title, with an optional external reference prefix
 
 **Detecting an optional Ref:** If the first word after `new` looks like an external ticket ID (matches the pattern `WORD-digits`, e.g. `PROJ-123`, `ENG-42`) or is a URL (starts with `http`), treat it as the `Ref` and the remaining words as the title. Otherwise treat all words as the title and omit the Ref field.
 
-1. Scan all rows in `.tasks/BACKLOG.md`, `.tasks/IN_PROGRESS.md`, and `.tasks/DONE.md` to find the highest TASK-NNN number. The new task gets the next number (padded to 3 digits).
+1. Scan all rows in `.tasks/BACKLOG.md`, `.tasks/IN_PROGRESS.md`, and `.tasks/DONE.md` to find the highest TASK-NNN number. The new task gets the next number (padded to 6 digits).
 2. Create `.tasks/tasks/TASK-NNN.md` using this template (fill in values; include `**Ref:**` line only if a ref was detected):
    ```
    # TASK-NNN: <title>
@@ -159,7 +166,7 @@ The message is everything in $ARGUMENTS after the word "log".
 The title is everything after `sub new`.
 
 1. Read `.tasks/IN_PROGRESS.md`. If no active task, stop.
-2. Open the parent task file. Count existing rows in the `## Subtasks` table (if present) to determine the next subtask number M (1-indexed).
+2. Open the parent task file. Count existing rows in the `## Subtasks` table (if present) to determine the next subtask number M (1-indexed and padded to 3 digits).
 3. Create `.tasks/tasks/TASK-NNN-M.md` using this template:
    ```
    # TASK-NNN-M: <title>
