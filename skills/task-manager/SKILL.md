@@ -1,6 +1,6 @@
 ---
-name: task
-description: Manage project tasks stored as Markdown files in .tasks/. Use for all task operations — status check, create new tasks, start/complete tasks, log progress, create and manage subtasks. Invoke when the user runs /task or asks to manage tasks.
+name: tasks
+description: Manage project tasks stored as Markdown files in .tasks/. Use for all task operations — status check, create new tasks, start/complete tasks, log progress, create and manage subtasks. Invoke when the user runs /tasks or asks to manage tasks.
 argument-hint: '(none) status | new <title> | next | done | wontdo <id> | backlog | log <msg> | sub new/next/done/log'
 ---
 

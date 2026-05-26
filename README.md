@@ -17,20 +17,20 @@ Then paste the snippet from `claude-md-snippet.md` into your project's `CLAUDE.m
 
 | Command | What it does |
 |---------|-------------|
-| `/task` | Show active task + next 3 backlog items |
-| `/task backlog` | Full backlog overview grouped by priority |
-| `/task next` | Start the top backlog item |
-| `/task done` | Mark the active task complete |
-| `/task wontdo TASK-003` | Dismiss a backlog task without doing it |
-| `/task new Fix login bug` | Create a new task and add it to the backlog |
-| `/task new PROJ-123 Fix login bug` | Same, with an external ticket reference |
-| `/task log Implemented JWT validation` | Append a progress entry to the active task |
-| `/task sub new Define data model` | Create a subtask under the active task |
-| `/task sub next` | Start the next unstarted subtask |
-| `/task sub done` | Complete the active subtask |
-| `/task sub log Reviewed with team` | Append a progress entry to the active subtask |
+| `/tasks` | Show active task + next 3 backlog items |
+| `/tasks backlog` | Full backlog overview grouped by priority |
+| `/tasks next` | Start the top backlog item |
+| `/tasks done` | Mark the active task complete |
+| `/tasks wontdo TASK-003` | Dismiss a backlog task without doing it |
+| `/tasks new Fix login bug` | Create a new task and add it to the backlog |
+| `/tasks new PROJ-123 Fix login bug` | Same, with an external ticket reference |
+| `/tasks log Implemented JWT validation` | Append a progress entry to the active task |
+| `/tasks sub new Define data model` | Create a subtask under the active task |
+| `/tasks sub next` | Start the next unstarted subtask |
+| `/tasks sub done` | Complete the active subtask |
+| `/tasks sub log Reviewed with team` | Append a progress entry to the active subtask |
 
-On first use, `/task` automatically creates the `.tasks/` folder structure in your project root — nothing to set up manually.
+On first use, `/tasks` automatically creates the `.tasks/` folder structure in your project root — nothing to set up manually.
 
 ## File structure
 
@@ -74,7 +74,7 @@ When the user says "let's continue", "what's next", or similar:
 2. If a task is listed — summarize its status and resume work
 3. If empty — read `.tasks/BACKLOG.md` and ask whether to start the top task
 
-Use `/task` for all task operations (start, complete, new, log).
+Use `/tasks` for all task operations (start, complete, new, log).
 ```
 
 ## Templates
